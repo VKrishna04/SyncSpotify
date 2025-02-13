@@ -1,0 +1,208 @@
+/* Reset some basic elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	color: #333;
+	background-color: #f7f7f7;
+	background-color: #1c1c1c;
+	color: #f1f1f1;
+}
+
+/* Header styling */
+header {
+	background-color: #1db954;
+	/* Spotify green */
+	color: #ffffff;
+	padding: 60px 20px;
+	text-align: center;
+	background-color: #333;
+	color: #f1f1f1;
+}
+
+header h1 {
+	font-size: 3em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	font-family: 'Arial Black', sans-serif;
+}
+
+header p {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+header a.btn {
+	color: #1db954;
+	background-color: #ffffff;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 25px;
+	text-decoration: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header a.btn:hover {
+	background-color: #1db954;
+	color: #ffffff;
+}
+
+/* Features section */
+section.container {
+	padding: 60px 20px;
+	text-align: center;
+}
+
+section.container h3 {
+	font-size: 2em;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+section.container p {
+	font-size: 1.1em;
+	color: #555;
+}
+
+section.container img {
+	width: 80px;
+	margin-bottom: 15px;
+}
+
+/* How It Works section */
+section.bg-light {
+	background-color: #f0f0f0;
+	padding: 60px 20px;
+	color: #333;
+}
+
+section.bg-light h2 {
+	font-size: 2em;
+	color: #1db954;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+	background-color: #333;
+	color: #ffffff;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+	header h1 {
+		font-size: 2.5em;
+	}
+
+	header p {
+		font-size: 1em;
+	}
+
+	header a.btn {
+		font-size: 1em;
+		padding: 8px 16px;
+	}
+}
+
+/* Profile Page Styles */
+.profile-header {
+	background-color: #1db954;
+	/* Spotify green */
+	color: #ffffff;
+	padding: 40px 20px;
+}
+
+.profile-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	padding: 40px 20px;
+}
+
+.profile-card {
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	text-align: center;
+	width: 100%;
+	max-width: 300px;
+	border-radius: 10px;
+}
+
+.profile-pic {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+.profile-card h2 {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.profile-card p {
+	font-size: 1em;
+	color: #777;
+}
+
+.premium-badge {
+	background-color: #f39c12;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 0.9em;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/* Navbar brand styles */
+nav .navbar-brand {
+	font-size: xx-large;
+}
+
+nav .navbar-brand .blue {
+	color: #537fbe;
+}
+
+nav .navbar-brand .red {
+	color: #ea433b;
+}
+
+nav .navbar-brand .yellow {
+	color: #f5b82e;
+}
+
+nav .navbar-brand .green {
+	color: #2e944b;
+}
+
+.card-img-top {
+	width: 100%;
+	height: 10vw;
+	object-fit: cover;
+}
+
+a {
+	color: #999;
+}
+
+p,
+span,
+h1,
+h2,
+h3 {
+	color: #f1f1f1;
+}

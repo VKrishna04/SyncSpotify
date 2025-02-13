@@ -1,0 +1,76 @@
+{% extends "layout.html" %} {% block title %} Playlists {% endblock %} {% block
+main %}
+<div class="row row-cols-1 row-cols-md-2 g-4">
+	{% for playlist in playlists %}
+	<div class="col">
+		<div class="card mb-3 text-white bg-dark" style="max-width: 540px">
+			<div class="row g-0">
+				<div class="col-md-4">
+					<img
+						src="{{ playlist.image }}"
+						class="img-fluid rounded-start card-img-top"
+						alt="..."
+					/>
+				</div>
+				<div class="col-md-8">
+					<div class="card-body">
+						<h5 class="card-title">{{ playlist.name }}</h5>
+						<p class="card-text">Tracks: {{ playlist.count }}</p>
+						<form method="get">
+							<input
+								type="hidden"
+								name="playlist_id"
+								value="{{ playlist.id }}"
+							/>
+							<input
+								type="hidden"
+								name="name"
+								value="{{ playlist.name }}"
+							/>
+							{% if playlist.type == 'sp' %}
+							<button
+								class="btn btn-success"
+								type="submit"
+								formaction="/convert"
+							>
+								Convert
+							</button>
+							<button
+								class="btn btn-primary"
+								type="submit"
+								formaction="/viewsp"
+							>
+								View
+							</button>
+							<button
+								class="btn btn-danger"
+								type="submit"
+								formaction="/deletesp"
+							>
+								Delete
+							</button>
+							{% elif playlist.type == 'yt' %}
+							<button
+								class="btn btn-primary"
+								type="submit"
+								formaction="/viewyt"
+							>
+								View
+							</button>
+							<button
+								class="btn btn-danger"
+								type="submit"
+								formaction="/deleteyt"
+							>
+								Delete
+							</button>
+							{% endif %}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

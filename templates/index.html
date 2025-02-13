@@ -1,35 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncSpotify Prime</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <header>
-        <h1>SyncSpotify Prime</h1>
-    </header>
-
-    <main class="container">
-        <p>Welcome to SyncSpotify Prime, a free tool to locally sync playlists from your Spotify and Prime Music accounts.
-            Please Make sure that popup blocker is disabled for this site.
-        </p>
-        <button onclick="openSpotifyLogin()">Login with Spotify</button>
-        <button onclick="openPrimeLogin()">View Prime Music Profile</button>
-        <button onclick="window.location.href='profiles.html'">View your logged in accounts</button>
-    </main>
-    <script>
-        function openSpotifyLogin() {
-            window.open(location.href = '/loginSpotify', '_blank');
-        }
-
-        function openPrimeLogin() {
-            window.open(location.href = '/loginPrime', '_blank');
-        }
-    </script>
-</body>
-
-</html>
+{% extends "layout.html" %} {% block title %} Welcome! {% endblock %} {% block
+main %}
+<main role="main" class="text-center">
+	<h1>SyncSpotify - Sync Your Spotify Playlists!</h1>
+	<!-- Header Section -->
+	<header class="bg-primary text-white text-center py-5">
+		<h1 class="display-4">SyncSpotify</h1>
+		<p class="lead">
+			Effortlessly sync your playlists across multiple Spotify accounts.
+		</p>
+		<a
+			onclick="window.location.href='/profiles'"
+			class="btn btn-light btn-lg mt-3"
+			>Get Started with Spotify</a
+		>
+	</header>
+	<p
+		class="lead"
+		style="
+			padding-left: 25%;
+			padding-right: 25%;
+			padding-top: 1.5%;
+			padding-bottom: 1%;
+		"
+	>
+		Syncify is a web app that helps you convert your favourite Spotify
+		playlists to YouTube playlists. To get started connect your Spotify and
+		YouTube accounts to the application.
+	</p>
+	<!-- Features Section -->
+	<section class="container py-5">
+		<div class="row text-center">
+			<div class="col-md-6 mx-auto">
+				<img
+					src="../static/download.png"
+					alt="Spotify Sync"
+					class="mb-3"
+					style="width: 80px"
+				/>
+				<h3>Seamless Spotify Sync</h3>
+				<p>
+					SyncSpotify makes it easy to transfer and synchronize your
+					Spotify playlists with just a few clicks.
+				</p>
+			</div>
+		</div>
+	</section>
+	<p class="lead">
+		<a href="/auth" class="btn btn-lg btn-success">Get Started</a>
+	</p>
+</main>
+{% endblock %}

@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncSpotify Prime - Profile</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>SyncSpotify Prime</h1>
-        <button class="logout-btn" onclick="location.href='/logout'">Logout</button>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SyncSpotify - Profiles</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="profile-header">
+			<h1>User Profiles</h1>
+		</header>
 
-    <main class="container">
-        <h2>User Profile</h2>
-        <p>Name: Hack Life</p>
-        <p>Email: hackreallife@outlook.com</p>
-        <!-- Add more profile information as needed -->
-        <button onclick="window.location.href='index.html'">Go back to Main Page</button>
-    </main>
-</body>
+		<div class="profile-container" id="profile-container">
+			<!-- User profiles will be injected here dynamically by JavaScript -->
+		</div>
+
+		<script src="app.js"></script>
+	</body>
 </html>
